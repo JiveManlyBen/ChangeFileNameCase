@@ -1,6 +1,10 @@
 import os
 import sys
 
+if len(sys.argv) < 2:
+	print "Error: no directory was supplied"
+	exit()
+
 path = sys.argv[1]
 
 try:
