@@ -1,11 +1,14 @@
+from Tkinter import Tk
+from tkFileDialog import askdirectory
+
 import os
 import sys
 
 if len(sys.argv) < 2:
-	print "Error: no directory was supplied"
-	exit()
-
-path = sys.argv[1]
+	Tk().withdraw()
+	path = askdirectory()
+else:
+	path = sys.argv[1]
 
 try:
 	for f in os.listdir(path):
